@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <!--
+        NOTA PARA EL DESARROLLADOR
+        - Nombre de marca de trabajo: "Pensión Plena". Reemplazar con el nombre real del cliente
+          (buscar "Pensión Plena" en este archivo y en app.js).
+        - WhatsApp del cliente: 56 4822 0851 -> https://wa.me/525648220851
+        - Fotografías: Unsplash (licencia libre, URLs verificadas).
+        - Agregar <link rel="canonical"> y og:url cuando se conozca el dominio final.
+    -->
+
+    <title>Asesoría de Pensión IMSS e ISSSTE y Préstamos | Pensión Plena</title>
+    <meta name="description" content="Asesoría de pensión IMSS e ISSSTE, retiro por desempleo, subcuenta Infonavit, Mejoravit y préstamos a pensionados. Te acompañamos paso a paso por WhatsApp.">
+    <meta name="keywords" content="asesoría de pensión IMSS, asesoría pensión ISSSTE, retiro por desempleo, retiro subcuenta Infonavit, préstamos a pensionados, préstamos personal de gobierno, Mejoravit, expediente electrónico Infonavit">
+    <meta name="author" content="Pensión Plena">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#F5F8FC">
+    <meta name="color-scheme" content="light">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="Pensión Plena">
+    <meta property="og:title" content="Tu pensión, sin complicaciones | Pensión Plena">
+    <meta property="og:description" content="Asesoría en pensión IMSS e ISSSTE, retiros, Infonavit y préstamos. Te acompañamos hasta que recibes tu dinero.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1625690988276-0a7b0cdf3d5d?auto=format&fit=crop&w=1200&h=630&q=75">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='14' fill='%230A8566'/%3E%3Cpath d='M12 32a12 12 0 0 1 24 0z' fill='%23fff'/%3E%3Cpath d='M24 10v5M11.5 15.5l3.5 3.5M36.5 15.5L33 19M6 29h5M37 29h5' stroke='%23F4B63F' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css">
+    <link rel="preload" as="image" fetchpriority="high" href="https://images.unsplash.com/photo-1625690988276-0a7b0cdf3d5d?auto=format&fit=crop&w=900&h=1200&q=78">
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        /* Activa los estilos de animación y garantiza que el preloader nunca bloquee la página */
+        document.documentElement.classList.add('js');
+        setTimeout(function () {
+            var b = document.body;
+            if (b && !b.classList.contains('is-ready')) {
+                var l = document.getElementById('loader');
+                if (l) l.style.display = 'none';
+                b.classList.remove('is-loading');
+                b.classList.add('is-ready');
+            }
+        }, 9000);
+    </script>
+
+    <noscript>
+        <style>
+            #loader { display: none !important; }
+            [data-reveal], .split-line > span { opacity: 1 !important; transform: none !important; }
+        </style>
+    </noscript>
+
+    <!-- Datos estructurados: negocio de servicios -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Pensión Plena",
+        "description": "Asesoría de pensión IMSS e ISSSTE, retiro por desempleo, retiro de subcuenta de vivienda Infonavit, préstamos a pensionados y a personal activo de gobierno, actualización de expediente electrónico Infonavit y trámites de Mejoravit.",
+        "telephone": "+52 56 4822 0851",
+        "areaServed": { "@type": "Country", "name": "México" },
+        "availableLanguage": "es-MX",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Trámites y asesorías",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Asesoría de pensión IMSS e ISSSTE" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retiro por desempleo" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Retiro de dinero de la subcuenta Infonavit" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Préstamos a pensionados" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Préstamos a personal activo de gobierno" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Actualización de expediente electrónico de Infonavit" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trámites de Mejoravit" } }
+            ]
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "¿Cuántas semanas cotizadas necesito para pensionarme?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de tu régimen. En Ley 73 del IMSS se pide un mínimo de 500 semanas cotizadas. En Ley 97 el mínimo es mayor y se ajusta cada año. Revisamos tu historial para darte la cifra exacta de tu caso." } },
+            { "@type": "Question", "name": "¿Cómo sé si soy Ley 73 o Ley 97?", "acceptedAnswer": { "@type": "Answer", "text": "En el IMSS, si empezaste a cotizar antes del 1 de julio de 1997 eres Ley 73, y si empezaste después eres Ley 97. En el ISSSTE depende de si ingresaste antes o después del 1 de abril de 2007." } },
+            { "@type": "Question", "name": "¿Puedo retirar dinero de mi Afore si me quedo sin empleo?", "acceptedAnswer": { "@type": "Answer", "text": "En ciertos casos sí. Existen requisitos, como el tiempo sin empleo, tus semanas cotizadas y la antigüedad de tu cuenta, y cambian según tu situación. Revisamos si cumples antes de que inicies el trámite." } },
+            { "@type": "Question", "name": "¿Puedo recuperar el dinero de mi subcuenta de vivienda del Infonavit?", "acceptedAnswer": { "@type": "Answer", "text": "Cuando se cumplen ciertas condiciones, como pensionarte o llegar a una edad determinada, y no tener un crédito vigente, puedes solicitar la devolución de tu saldo. Revisamos si te corresponde y cómo pedirlo." } },
+            { "@type": "Question", "name": "¿Los préstamos para pensionados tienen costo?", "acceptedAnswer": { "@type": "Answer", "text": "Todo crédito tiene un costo: intereses, comisiones y el CAT. Antes de que decidas te explicamos el monto, el plazo, el descuento mensual y el costo total. Todo crédito está sujeto a aprobación." } },
+            { "@type": "Question", "name": "¿Ustedes son parte del IMSS, del ISSSTE o del Infonavit?", "acceptedAnswer": { "@type": "Answer", "text": "No. Somos una asesoría privada e independiente. Te ayudamos a entender y gestionar tus trámites ante esas instituciones." } },
+            { "@type": "Question", "name": "¿Qué necesito para empezar?", "acceptedAnswer": { "@type": "Answer", "text": "Solo escribirnos por WhatsApp y contarnos tu situación. Después te indicamos qué documentos reunir según tu trámite, por ejemplo identificación oficial, CURP y número de seguridad social." } }
+        ]
+    }
+    </script>
+</head>
+
+<body class="is-loading">
+
+<!-- Sprite SVG: marca y glifo de WhatsApp -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+        <linearGradient id="g-mark" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#19C39A"/>
+            <stop offset="1" stop-color="#07705A"/>
+        </linearGradient>
+    </defs>
+    <symbol id="i-mark" viewBox="0 0 48 48">
+        <rect width="48" height="48" rx="14" fill="url(#g-mark)"/>
+        <path d="M12 32a12 12 0 0 1 24 0z" fill="#fff"/>
+        <path d="M24 10v5M11.5 15.5l3.5 3.5M36.5 15.5L33 19M6 29h5M37 29h5" stroke="#F4B63F" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+        <path d="M10 37.5h28" stroke="#fff" stroke-width="2.6" stroke-linecap="round" opacity=".85"/>
+    </symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+    </symbol>
+</svg>
+
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- ============ PRELOADER ============ -->
+<div id="loader" role="status" aria-live="polite" aria-label="Cargando el sitio">
+    <div class="loader__panel loader__panel--top"></div>
+    <div class="loader__panel loader__panel--bottom"></div>
+    <div class="loader__center">
+        <div class="loader__orb" aria-hidden="true">
+            <svg class="loader__ring" viewBox="0 0 120 120">
+                <circle class="loader__ring-track" cx="60" cy="60" r="52"/>
+                <circle class="loader__ring-arc" cx="60" cy="60" r="52"/>
+            </svg>
+            <svg class="loader__ring loader__ring--inner" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="40"/>
+            </svg>
+            <svg class="loader__mark"><use href="#i-mark"/></svg>
+            <span class="loader__spark loader__spark--1"></span>
+            <span class="loader__spark loader__spark--2"></span>
+            <span class="loader__spark loader__spark--3"></span>
+        </div>
+        <p class="loader__brand">Pensión <b>Plena</b></p>
+        <p class="loader__msg" id="loader-msg">Preparando tu asesoría</p>
+        <div class="loader__bar" aria-hidden="true"><span id="loader-bar"></span></div>
+        <p class="loader__pct" id="loader-pct" aria-hidden="true">0%</p>
+    </div>
+</div>
+
+<div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+<!-- ============ NAVEGACIÓN ============ -->
+<header class="nav" id="nav">
+    <div class="nav__bar">
+        <a class="brand" href="#inicio" aria-label="Pensión Plena, ir al inicio">
+            <svg class="brand__mark" aria-hidden="true"><use href="#i-mark"/></svg>
+            <span class="brand__text">Pensión <b>Plena</b></span>
+        </a>
+        <nav class="nav__links" aria-label="Principal">
+            <a href="#servicios">Trámites</a>
+            <a href="#beneficios">Beneficios</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#preguntas">Preguntas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <a class="btn btn--primary btn--sm nav__cta" href="https://wa.me/525648220851" data-wa="Hola, quiero mi asesoría de pensión." data-magnetic>
+            <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+            Quiero mi asesoría
+        </a>
+        <button class="nav__burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+    <nav class="menu__nav" aria-label="Menú móvil">
+        <a href="#servicios">Trámites</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn--primary btn--lg menu__cta" href="https://wa.me/525648220851" data-wa="Hola, quiero mi asesoría de pensión.">
+        <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+        Quiero mi asesoría
+    </a>
+</div>
+
+<main id="contenido">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero__bg" aria-hidden="true">
+        <span class="blob blob--a"></span>
+        <span class="blob blob--b"></span>
+        <span class="blob blob--c"></span>
+        <div class="hero__grid"></div>
+        <canvas id="sparks"></canvas>
+    </div>
+
+    <div class="container hero__inner">
+        <div class="hero__copy">
+            <p class="pill" data-hero-in style="--d:.1s">
+                <i class="ph-fill ph-seal-check" aria-hidden="true"></i>
+                <span>Asesoría en</span>
+                <span class="rotator" data-rotator aria-live="off">
+                    <span class="is-on">pensión IMSS e ISSSTE</span>
+                    <span>retiro por desempleo</span>
+                    <span>subcuenta Infonavit</span>
+                    <span>préstamos a pensionados</span>
+                    <span>trámites de Mejoravit</span>
+                </span>
+            </p>
+
+            <h1 class="hero__title" id="hero-title">
+                <span class="split-line"><span data-hero-in style="--d:.25s">Tu pensión,</span></span>
+                <span class="split-line"><span data-hero-in style="--d:.4s"><em class="grad">sin complicaciones.</em></span></span>
+            </h1>
+
+            <p class="hero__lead" data-hero-in style="--d:.6s">
+                Asesoría en pensión IMSS e ISSSTE, retiros, Infonavit y préstamos. Te acompañamos hasta que recibes tu dinero.
+            </p>
+
+            <div class="hero__ctas" data-hero-in style="--d:.8s">
+                <a class="btn btn--primary btn--lg" href="https://wa.me/525648220851" data-wa="Hola, estoy listo para empezar mi trámite de pensión." data-magnetic>
+                    <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+                    Estoy listo para empezar
+                </a>
+                <a class="btn btn--ghost btn--lg" href="#servicios">
+                    Ver los trámites
+                    <i class="ph ph-arrow-down" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="hero__visual" data-hero-in style="--d:.35s">
+            <div class="stage" data-stage>
+                <span class="orbit orbit--1" aria-hidden="true"></span>
+                <span class="orbit orbit--2" aria-hidden="true"></span>
+
+                <figure class="arch">
+                    <img
+                        src="https://images.unsplash.com/photo-1625690988276-0a7b0cdf3d5d?auto=format&fit=crop&w=900&h=1200&q=78"
+                        srcset="https://images.unsplash.com/photo-1625690988276-0a7b0cdf3d5d?auto=format&fit=crop&w=600&h=800&q=75 600w,
+                                https://images.unsplash.com/photo-1625690988276-0a7b0cdf3d5d?auto=format&fit=crop&w=900&h=1200&q=78 900w"
+                        sizes="(min-width: 1024px) 460px, 80vw"
+                        width="900" height="1200"
+                        alt="Pareja de adultos mayores sonriendo y abrazándose al aire libre, felices con su pensión"
+                        fetchpriority="high" decoding="async">
+                    <span class="arch__shine" aria-hidden="true"></span>
+                </figure>
+
+                <div class="float float--a" aria-hidden="true">
+                    <i class="ph-fill ph-bank"></i>
+                    <div><strong>IMSS e ISSSTE</strong><span>Revisamos tu pensión</span></div>
+                </div>
+                <div class="float float--b" aria-hidden="true">
+                    <i class="ph-fill ph-house-line"></i>
+                    <div><strong>Infonavit</strong><span>Tu subcuenta de vivienda</span></div>
+                </div>
+                <div class="float float--c" aria-hidden="true">
+                    <span class="float__check"><i class="ph-bold ph-check"></i></span>
+                    <div><strong>Trámite concluido</strong><span>Dinero en tu cuenta</span></div>
+                </div>
+
+                <span class="coin coin--1" data-coin aria-hidden="true"></span>
+                <span class="coin coin--2" data-coin aria-hidden="true"></span>
+                <span class="coin coin--3" data-coin aria-hidden="true"></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ MARQUEE (único de la página) ============ -->
+<section class="marquee" aria-label="Trámites que realizamos">
+    <div class="marquee__track" data-marquee>
+        <ul class="marquee__list">
+            <li>Pensión IMSS</li><li class="sp" aria-hidden="true"><i class="ph-fill ph-star-four"></i></li>
+            <li>Pensión ISSSTE</li><li class="sp" aria-hidden="true"><i class="ph-fill ph-star-four"></i></li>
+            <li>Retiro por desempleo</li><li class="sp" aria-hidden="true"><i class="ph-fill ph-star-four"></i></li>
+            <li>Subcuenta Infonavit</li><li class="sp" aria-hidden="true"><i class="ph-fill ph-star-four"></i></li>
+            <li>Préstamos a pensionados</li><li class="sp" aria-hidden="true"><i class="ph-fill ph-star-four"></i></li>
+            <li>Personal de gobierno</li><li class="sp" aria-hidden="true"><i class="ph-fill ph-star-four"></i></li>
+            <li>Expediente Infonavit</li><li class="sp" aria-hidden="true"><i class="ph-fill ph-star-four"></i></li>
+            <li>Mejoravit</li><li class="sp" aria-hidden="true"><i class="ph-fill ph-star-four"></i></li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============ MANIFIESTO ============ -->
+<section class="manifesto" id="nosotros" aria-labelledby="manifesto-title">
+    <div class="container">
+        <h2 class="eyebrow" id="manifesto-title" data-reveal>Por qué existimos</h2>
+        <p class="manifesto__text" data-words>
+            Pensionarte debería ser el mejor momento de tu vida, no un laberinto de ventanillas, formatos y filas. Nosotros ponemos el orden, la paciencia y el conocimiento. Tú pones lo más valioso: tu tiempo.
+        </p>
+
+        <div class="stats">
+            <div class="stat" data-reveal style="--d:.05s">
+                <strong class="stat__num"><span data-count="7">7</span></strong>
+                <span class="stat__label">trámites que resolvemos de principio a fin</span>
+            </div>
+            <div class="stat" data-reveal style="--d:.15s">
+                <strong class="stat__num"><span data-count="3">3</span></strong>
+                <span class="stat__label">instituciones que conocemos: IMSS, ISSSTE e Infonavit</span>
+            </div>
+            <div class="stat" data-reveal style="--d:.25s">
+                <strong class="stat__num"><span data-count="2">2</span></strong>
+                <span class="stat__label">regímenes de pensión explicados en palabras claras: Ley 73 y Ley 97</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ IMAGEN QUE SE EXPANDE AL HACER SCROLL ============ -->
+<section class="expand" id="etapa" aria-labelledby="expand-title" data-expand>
+    <div class="expand__sticky">
+        <div class="expand__words" aria-hidden="true">
+            <span data-l>Tu mejor</span>
+            <span data-r>etapa</span>
+        </div>
+
+        <figure class="expand__media" data-expand-media>
+            <img
+                src="https://images.unsplash.com/photo-1514415008039-efa173293080?auto=format&fit=crop&w=2000&q=75"
+                srcset="https://images.unsplash.com/photo-1514415008039-efa173293080?auto=format&fit=crop&w=1000&q=72 1000w,
+                        https://images.unsplash.com/photo-1514415008039-efa173293080?auto=format&fit=crop&w=2000&q=75 2000w"
+                sizes="100vw"
+                width="2000" height="1333"
+                alt="Pareja de adultos mayores junto al mar, él besa su mejilla mientras ella sonríe"
+                loading="lazy" decoding="async">
+            <span class="expand__scrim" aria-hidden="true"></span>
+        </figure>
+
+        <div class="expand__overlay" data-expand-overlay>
+            <h2 id="expand-title">Esta es la etapa que te mereces.</h2>
+            <p>Tú ya trabajaste por ella. Nosotros nos encargamos de que el papeleo no te la quite.</p>
+            <a class="btn btn--light btn--lg" href="https://wa.me/525648220851" data-wa="Hola, quiero mi nueva etapa. Necesito asesoría para mi pensión." data-magnetic>
+                Quiero mi nueva etapa
+                <i class="ph ph-arrow-up-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVICIOS (tarjetas apiladas al hacer scroll) ============ -->
+<section class="services" id="servicios" aria-labelledby="services-title">
+    <div class="container">
+        <header class="section-head">
+            <h2 id="services-title" data-split>Siete trámites. Un solo equipo que te acompaña.</h2>
+            <p data-reveal>Dinos qué necesitas y nosotros revisamos tu caso, reunimos los documentos y damos seguimiento contigo.</p>
+        </header>
+
+        <ol class="stack" data-stack>
+            <li class="stack__card tone-1" style="--i:0" data-stack-card>
+                <article class="svc" aria-labelledby="svc-1">
+                    <div class="svc__body">
+                        <span class="svc__tag"><i class="ph-fill ph-bank" aria-hidden="true"></i> IMSS e ISSSTE</span>
+                        <h3 id="svc-1">Asesoría de pensión IMSS e ISSSTE</h3>
+                        <p>Revisamos tus semanas cotizadas, tu régimen y la mejor ruta para pensionarte. Te decimos con claridad qué te falta y qué sigue.</p>
+                        <ul class="ticks">
+                            <li>Historial de semanas cotizadas</li>
+                            <li>Régimen Ley 73, Ley 97 o ISSSTE</li>
+                            <li>Fecha y ruta recomendada</li>
+                        </ul>
+                        <a class="btn btn--primary" href="https://wa.me/525648220851" data-wa="Hola, quiero saber si ya puedo pensionarme (IMSS / ISSSTE).">¿Ya puedo pensionarme? <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="svc__visual" aria-hidden="true">
+                        <div class="slab" data-tilt><i class="ph-fill ph-shield-check"></i></div>
+                        <span class="orb orb--1"></span><span class="orb orb--2"></span>
+                    </div>
+                </article>
+            </li>
+
+            <li class="stack__card tone-2" style="--i:1" data-stack-card>
+                <article class="svc" aria-labelledby="svc-2">
+                    <div class="svc__body">
+                        <span class="svc__tag"><i class="ph-fill ph-hand-coins" aria-hidden="true"></i> Afore</span>
+                        <h3 id="svc-2">Retiro por desempleo</h3>
+                        <p>Si te quedaste sin empleo, revisamos si puedes disponer de una parte de tu Afore y te guiamos en cada paso de la solicitud.</p>
+                        <ul class="ticks">
+                            <li>Revisión de requisitos</li>
+                            <li>Documentos listos y en orden</li>
+                            <li>Seguimiento hasta tu resolución</li>
+                        </ul>
+                        <a class="btn btn--primary" href="https://wa.me/525648220851" data-wa="Hola, quiero revisar mi retiro por desempleo.">Quiero revisar mi retiro <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="svc__visual" aria-hidden="true">
+                        <div class="slab" data-tilt><i class="ph-fill ph-hand-coins"></i></div>
+                        <span class="orb orb--1"></span><span class="orb orb--2"></span>
+                    </div>
+                </article>
+            </li>
+
+            <li class="stack__card tone-3" style="--i:2" data-stack-card>
+                <article class="svc" aria-labelledby="svc-3">
+                    <div class="svc__body">
+                        <span class="svc__tag"><i class="ph-fill ph-house-line" aria-hidden="true"></i> Infonavit</span>
+                        <h3 id="svc-3">Retiro de dinero de tu subcuenta Infonavit</h3>
+                        <p>Identificamos si tienes saldo en tu subcuenta de vivienda y cómo solicitarlo cuando te corresponde. Sin vueltas ni confusiones.</p>
+                        <ul class="ticks">
+                            <li>Consulta de tu saldo</li>
+                            <li>Verificación de condiciones</li>
+                            <li>Solicitud acompañada</li>
+                        </ul>
+                        <a class="btn btn--primary" href="https://wa.me/525648220851" data-wa="Hola, quiero recuperar el saldo de mi subcuenta de vivienda Infonavit.">Quiero recuperar mi saldo <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="svc__visual" aria-hidden="true">
+                        <div class="slab" data-tilt><i class="ph-fill ph-piggy-bank"></i></div>
+                        <span class="orb orb--1"></span><span class="orb orb--2"></span>
+                    </div>
+                </article>
+            </li>
+
+            <li class="stack__card tone-4" style="--i:3" data-stack-card>
+                <article class="svc" aria-labelledby="svc-4">
+                    <div class="svc__body">
+                        <span class="svc__tag"><i class="ph-fill ph-wallet" aria-hidden="true"></i> Pensionados</span>
+                        <h3 id="svc-4">Préstamos a pensionados</h3>
+                        <p>Opciones de crédito para pensionados, explicadas antes de que decidas: monto, plazo, descuento mensual y costo total. Sujeto a aprobación.</p>
+                        <ul class="ticks">
+                            <li>Condiciones claras y por escrito</li>
+                            <li>Comparamos tus opciones</li>
+                            <li>Tú decides, sin presión</li>
+                        </ul>
+                        <a class="btn btn--primary" href="https://wa.me/525648220851" data-wa="Hola, quiero conocer opciones de préstamo para pensionados.">Quiero conocer opciones <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="svc__visual" aria-hidden="true">
+                        <div class="slab" data-tilt><i class="ph-fill ph-wallet"></i></div>
+                        <span class="orb orb--1"></span><span class="orb orb--2"></span>
+                    </div>
+                </article>
+            </li>
+
+            <li class="stack__card tone-1" style="--i:4" data-stack-card>
+                <article class="svc" aria-labelledby="svc-5">
+                    <div class="svc__body">
+                        <span class="svc__tag"><i class="ph-fill ph-buildings" aria-hidden="true"></i> Gobierno</span>
+                        <h3 id="svc-5">Préstamos a personal activo de gobierno</h3>
+                        <p>Alternativas de crédito para trabajadores del gobierno, con condiciones transparentes y un plan de pagos que sí puedas sostener. Sujeto a aprobación.</p>
+                        <ul class="ticks">
+                            <li>Cotización sin compromiso</li>
+                            <li>Plan de pagos a tu medida</li>
+                            <li>Trámite acompañado</li>
+                        </ul>
+                        <a class="btn btn--primary" href="https://wa.me/525648220851" data-wa="Hola, trabajo en gobierno y quiero cotizar un préstamo.">Quiero cotizar mi préstamo <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="svc__visual" aria-hidden="true">
+                        <div class="slab" data-tilt><i class="ph-fill ph-buildings"></i></div>
+                        <span class="orb orb--1"></span><span class="orb orb--2"></span>
+                    </div>
+                </article>
+            </li>
+
+            <li class="stack__card tone-2" style="--i:5" data-stack-card>
+                <article class="svc" aria-labelledby="svc-6">
+                    <div class="svc__body">
+                        <span class="svc__tag"><i class="ph-fill ph-files" aria-hidden="true"></i> Infonavit</span>
+                        <h3 id="svc-6">Actualización de expediente electrónico Infonavit</h3>
+                        <p>Dejamos tu expediente al día para que ningún trámite ni crédito se frene por un dato faltante o desactualizado.</p>
+                        <ul class="ticks">
+                            <li>Revisión de datos y documentos</li>
+                            <li>Corrección de inconsistencias</li>
+                            <li>Expediente listo para avanzar</li>
+                        </ul>
+                        <a class="btn btn--primary" href="https://wa.me/525648220851" data-wa="Hola, quiero actualizar mi expediente electrónico de Infonavit.">Quiero ponerlo al día <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="svc__visual" aria-hidden="true">
+                        <div class="slab" data-tilt><i class="ph-fill ph-files"></i></div>
+                        <span class="orb orb--1"></span><span class="orb orb--2"></span>
+                    </div>
+                </article>
+            </li>
+
+            <li class="stack__card tone-3" style="--i:6" data-stack-card>
+                <article class="svc" aria-labelledby="svc-7">
+                    <div class="svc__body">
+                        <span class="svc__tag"><i class="ph-fill ph-paint-roller" aria-hidden="true"></i> Mejoravit</span>
+                        <h3 id="svc-7">Trámites de Mejoravit</h3>
+                        <p>Te orientamos en el crédito para mejorar tu hogar: requisitos, documentos y solicitud, para que te enfoques en tu casa y no en el papeleo.</p>
+                        <ul class="ticks">
+                            <li>Requisitos explicados</li>
+                            <li>Documentación completa</li>
+                            <li>Solicitud acompañada</li>
+                        </ul>
+                        <a class="btn btn--primary" href="https://wa.me/525648220851" data-wa="Hola, quiero información para mi trámite de Mejoravit.">Quiero mejorar mi casa <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="svc__visual" aria-hidden="true">
+                        <div class="slab" data-tilt><i class="ph-fill ph-house-line"></i></div>
+                        <span class="orb orb--1"></span><span class="orb orb--2"></span>
+                    </div>
+                </article>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ BENEFICIOS (bento) ============ -->
+<section class="why" id="beneficios" aria-labelledby="why-title">
+    <div class="container">
+        <header class="section-head">
+            <h2 id="why-title" data-split>Hecho para que te sientas tranquilo, de principio a fin.</h2>
+        </header>
+
+        <div class="bento">
+            <article class="bento__cell bento__cell--photo" data-reveal data-spot>
+                <img
+                    src="https://images.unsplash.com/photo-1758691031749-607d43c14f63?auto=format&fit=crop&w=1000&q=75"
+                    width="1000" height="800"
+                    alt="Pareja de adultos mayores revisando documentos juntos en casa"
+                    loading="lazy" decoding="async">
+                <div class="bento__text">
+                    <h3>Te lo explicamos como a un amigo</h3>
+                    <p>Sin tecnicismos ni letra chiquita. Cada paso, cada documento y cada costo, en palabras claras.</p>
+                </div>
+            </article>
+
+            <article class="bento__cell bento__cell--green" data-reveal style="--d:.08s" data-spot>
+                <i class="ph-fill ph-handshake" aria-hidden="true"></i>
+                <h3>Trato humano y paciente</h3>
+                <p>Escuchamos tu historia completa. Aquí nadie te apura ni te deja con dudas.</p>
+            </article>
+
+            <article class="bento__cell bento__cell--white" data-reveal style="--d:.14s" data-spot>
+                <i class="ph-fill ph-lock-key" aria-hidden="true"></i>
+                <h3>Tu información, con respeto</h3>
+                <p>Solo la usamos para atender tu trámite.</p>
+            </article>
+
+            <article class="bento__cell bento__cell--gold" data-reveal style="--d:.2s" data-spot>
+                <i class="ph-fill ph-chats-circle" aria-hidden="true"></i>
+                <h3>Todo desde tu celular</h3>
+                <p>Escríbenos por WhatsApp, sin filas ni citas para empezar.</p>
+            </article>
+
+            <article class="bento__cell bento__cell--money" data-reveal style="--d:.1s" data-spot>
+                <img
+                    src="https://images.unsplash.com/photo-1578360479598-76f7a65fddf0?auto=format&fit=crop&w=1600&h=700&q=72"
+                    width="1600" height="700"
+                    alt="Billetes de pesos mexicanos, representando el dinero que recibes al concluir tu trámite"
+                    loading="lazy" decoding="async">
+                <div class="bento__money-copy">
+                    <h3>Tu dinero, tu decisión.</h3>
+                    <p>Te mostramos tus opciones con números claros, para que decidas con seguridad y recibas lo que te corresponde.</p>
+                    <a class="btn btn--light" href="https://wa.me/525648220851" data-wa="Hola, hagan clic aquí: quiero que me cuenten mis opciones para recibir mi dinero.">
+                        Haz clic aquí y cuéntanos tu caso
+                        <i class="ph ph-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SITUACIÓN (selector interactivo) ============ -->
+<section class="situation" id="tu-caso" aria-labelledby="sit-title">
+    <div class="container">
+        <header class="section-head">
+            <h2 id="sit-title" data-split>¿Cuál es tu situación hoy?</h2>
+            <p data-reveal>Elige la que más se parezca a la tuya y te decimos por dónde empezar.</p>
+        </header>
+
+        <div class="sit" data-tabs>
+            <div class="sit__tabs" role="tablist" aria-label="Tu situación">
+                <button class="sit__tab is-active" role="tab" id="tab-1" aria-selected="true" aria-controls="panel-1" type="button">
+                    <i class="ph-fill ph-sun-horizon" aria-hidden="true"></i> Voy a pensionarme
+                </button>
+                <button class="sit__tab" role="tab" id="tab-2" aria-selected="false" aria-controls="panel-2" tabindex="-1" type="button">
+                    <i class="ph-fill ph-heart" aria-hidden="true"></i> Ya soy pensionado
+                </button>
+                <button class="sit__tab" role="tab" id="tab-3" aria-selected="false" aria-controls="panel-3" tabindex="-1" type="button">
+                    <i class="ph-fill ph-buildings" aria-hidden="true"></i> Trabajo en gobierno
+                </button>
+                <button class="sit__tab" role="tab" id="tab-4" aria-selected="false" aria-controls="panel-4" tabindex="-1" type="button">
+                    <i class="ph-fill ph-briefcase" aria-hidden="true"></i> Me quedé sin empleo
+                </button>
+                <button class="sit__tab" role="tab" id="tab-5" aria-selected="false" aria-controls="panel-5" tabindex="-1" type="button">
+                    <i class="ph-fill ph-house-line" aria-hidden="true"></i> Tengo Infonavit
+                </button>
+            </div>
+
+            <div class="sit__panels">
+                <div class="sit__panel is-active" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+                    <div class="sit__copy">
+                        <h3>Conoce tu fecha y tu ruta para pensionarte</h3>
+                        <p>Revisamos tus semanas cotizadas, el régimen que te aplica y qué te falta, si es que te falta algo. Sales con un plan claro, no con más dudas.</p>
+                        <a class="btn btn--primary btn--lg" href="https://wa.me/525648220851" data-wa="Hola, voy a pensionarme y quiero que revisen mi caso.">Que revisen mi caso <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="sit__card"><i class="ph-fill ph-sun-horizon" aria-hidden="true"></i><span>Asesoría de pensión IMSS e ISSSTE</span></div>
+                </div>
+                <div class="sit__panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+                    <div class="sit__copy">
+                        <h3>Aprovecha todo lo que ya te corresponde</h3>
+                        <p>Revisamos opciones de crédito para pensionados y si aún tienes saldo en tu subcuenta de vivienda. Siempre con las condiciones claras desde el inicio.</p>
+                        <a class="btn btn--primary btn--lg" href="https://wa.me/525648220851" data-wa="Hola, ya soy pensionado y quiero conocer mis opciones.">Quiero conocer mis opciones <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="sit__card"><i class="ph-fill ph-heart" aria-hidden="true"></i><span>Préstamos a pensionados y subcuenta Infonavit</span></div>
+                </div>
+                <div class="sit__panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3" hidden>
+                    <div class="sit__copy">
+                        <h3>Crédito claro para quien trabaja en gobierno</h3>
+                        <p>Cotizamos contigo un préstamo con descuento y condiciones transparentes, y te acompañamos hasta que quede resuelto. Sujeto a aprobación.</p>
+                        <a class="btn btn--primary btn--lg" href="https://wa.me/525648220851" data-wa="Hola, trabajo en gobierno y quiero cotizar mi préstamo.">Quiero mi cotización <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="sit__card"><i class="ph-fill ph-buildings" aria-hidden="true"></i><span>Préstamos a personal activo de gobierno</span></div>
+                </div>
+                <div class="sit__panel" role="tabpanel" id="panel-4" aria-labelledby="tab-4" hidden>
+                    <div class="sit__copy">
+                        <h3>Si te quedaste sin empleo, no estás solo</h3>
+                        <p>Revisamos si puedes disponer de una parte de tu Afore y te ayudamos con la solicitud para que no pierdas tiempo ni te equivoques en el proceso.</p>
+                        <a class="btn btn--primary btn--lg" href="https://wa.me/525648220851" data-wa="Hola, me quedé sin empleo y quiero revisar mi retiro por desempleo.">Quiero revisar mi retiro <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="sit__card"><i class="ph-fill ph-briefcase" aria-hidden="true"></i><span>Retiro por desempleo</span></div>
+                </div>
+                <div class="sit__panel" role="tabpanel" id="panel-5" aria-labelledby="tab-5" hidden>
+                    <div class="sit__copy">
+                        <h3>Tu expediente y tu casa, en orden</h3>
+                        <p>Actualizamos tu expediente electrónico, revisamos tu subcuenta y te orientamos en Mejoravit si quieres mejorar tu hogar.</p>
+                        <a class="btn btn--primary btn--lg" href="https://wa.me/525648220851" data-wa="Hola, tengo Infonavit y quiero ordenar mi expediente y revisar mis opciones.">Quiero ordenar mi Infonavit <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="sit__card"><i class="ph-fill ph-house-line" aria-hidden="true"></i><span>Expediente, subcuenta y Mejoravit</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PROCESO (línea de tiempo que se dibuja con el scroll) ============ -->
+<section class="process" id="proceso" aria-labelledby="process-title">
+    <div class="container">
+        <header class="section-head">
+            <h2 id="process-title" data-split>Así de simple es avanzar contigo.</h2>
+        </header>
+
+        <ol class="timeline" data-timeline>
+            <span class="timeline__rail" aria-hidden="true"><span class="timeline__fill" data-timeline-fill></span></span>
+
+            <li class="tl" data-tl>
+                <span class="tl__node" aria-hidden="true"><i class="ph-fill ph-chat-circle-text"></i></span>
+                <div class="tl__card" data-reveal>
+                    <h3>Escríbenos por WhatsApp</h3>
+                    <p>Cuéntanos tu situación con tus propias palabras. No necesitas formatos ni cita para empezar.</p>
+                </div>
+            </li>
+            <li class="tl" data-tl>
+                <span class="tl__node" aria-hidden="true"><i class="ph-fill ph-magnifying-glass"></i></span>
+                <div class="tl__card" data-reveal>
+                    <h3>Revisamos tu caso</h3>
+                    <p>Analizamos tu historial, tus semanas y tu saldo para saber con certeza qué opciones tienes.</p>
+                </div>
+            </li>
+            <li class="tl" data-tl>
+                <span class="tl__node" aria-hidden="true"><i class="ph-fill ph-compass"></i></span>
+                <div class="tl__card" data-reveal>
+                    <h3>Armamos tu ruta</h3>
+                    <p>Te explicamos qué documentos necesitas, cuánto puede tardar y qué esperar en cada etapa.</p>
+                </div>
+            </li>
+            <li class="tl" data-tl>
+                <span class="tl__node" aria-hidden="true"><i class="ph-fill ph-seal-check"></i></span>
+                <div class="tl__card" data-reveal>
+                    <h3>Te acompañamos hasta el final</h3>
+                    <p>Damos seguimiento contigo hasta que tengas tu resolución y tu dinero.</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<!-- ============ GALERÍA PARALLAX ============ -->
+<section class="gallery" id="vida" aria-labelledby="gallery-title">
+    <div class="container">
+        <header class="section-head section-head--center">
+            <p class="eyebrow" data-reveal>Lo que viene después</p>
+            <h2 id="gallery-title" data-split>Después del trámite empieza lo bueno.</h2>
+            <p data-reveal>Viajes, familia, jardín, tiempo para ti. Eso es lo que queremos que disfrutes.</p>
+        </header>
+
+        <div class="gallery__grid" data-gallery>
+            <div class="gcol" data-col="1">
+                <figure class="gimg gimg--tall"><img src="https://images.unsplash.com/photo-1737704295069-d2b7ababda36?auto=format&fit=crop&w=700&h=900&q=72" width="700" height="900" alt="Pareja de adultos mayores sonriendo de la mano al atardecer en un parque" loading="lazy" decoding="async"></figure>
+                <figure class="gimg gimg--wide"><img src="https://images.unsplash.com/photo-1758686253677-d3af6c15186e?auto=format&fit=crop&w=800&h=560&q=72" width="800" height="560" alt="Pareja mayor abrazada y sonriendo en el sillón de su casa" loading="lazy" decoding="async"></figure>
+            </div>
+            <div class="gcol" data-col="-1">
+                <figure class="gimg gimg--wide"><img src="https://images.unsplash.com/photo-1761839257513-a921710a4291?auto=format&fit=crop&w=800&h=560&q=72" width="800" height="560" alt="Dos adultos mayores disfrutando de su jardín lleno de flores" loading="lazy" decoding="async"></figure>
+                <figure class="gimg gimg--tall"><img src="https://images.unsplash.com/photo-1575267685970-7fbabf6ed7b0?auto=format&fit=crop&w=700&h=900&q=72" width="700" height="900" alt="Adultos mayores riendo a carcajadas al aire libre" loading="lazy" decoding="async"></figure>
+            </div>
+            <div class="gcol gcol--third" data-col="1">
+                <figure class="gimg gimg--tall"><img src="https://images.unsplash.com/photo-1758691031979-6128d4029604?auto=format&fit=crop&w=700&h=900&q=72" width="700" height="900" alt="Mujer mayor sonriendo mientras revisa su celular en casa" loading="lazy" decoding="async"></figure>
+                <figure class="gimg gimg--wide"><img src="https://images.unsplash.com/photo-1758691031410-13bd745df928?auto=format&fit=crop&w=800&h=560&q=72" width="800" height="560" alt="Pareja de adultos mayores tomándose una selfie y sonriendo" loading="lazy" decoding="async"></figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PREGUNTAS FRECUENTES ============ -->
+<section class="faq" id="preguntas" aria-labelledby="faq-title">
+    <div class="container faq__inner">
+        <header class="section-head">
+            <h2 id="faq-title" data-split>Lo que más nos preguntan.</h2>
+            <p data-reveal>Si no encuentras tu duda aquí, escríbenos y te respondemos por WhatsApp.</p>
+        </header>
+
+        <div class="acc" data-accordion>
+            <div class="acc__item" data-reveal>
+                <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a1" id="q1">¿Cuántas semanas cotizadas necesito para pensionarme?<i class="ph ph-plus" aria-hidden="true"></i></button></h3>
+                <div class="acc__panel" id="a1" role="region" aria-labelledby="q1"><div><p>Depende de tu régimen. En Ley 73 del IMSS se pide un mínimo de 500 semanas cotizadas. En Ley 97 el mínimo es mayor y se ajusta cada año. Revisamos tu historial para darte la cifra exacta de tu caso.</p></div></div>
+            </div>
+            <div class="acc__item" data-reveal>
+                <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a2" id="q2">¿Cómo sé si soy Ley 73 o Ley 97?<i class="ph ph-plus" aria-hidden="true"></i></button></h3>
+                <div class="acc__panel" id="a2" role="region" aria-labelledby="q2"><div><p>En el IMSS, si empezaste a cotizar antes del 1 de julio de 1997 eres Ley 73, y si empezaste después eres Ley 97. En el ISSSTE depende de si ingresaste antes o después del 1 de abril de 2007.</p></div></div>
+            </div>
+            <div class="acc__item" data-reveal>
+                <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a3" id="q3">¿Puedo retirar dinero de mi Afore si me quedo sin empleo?<i class="ph ph-plus" aria-hidden="true"></i></button></h3>
+                <div class="acc__panel" id="a3" role="region" aria-labelledby="q3"><div><p>En ciertos casos sí. Existen requisitos, como el tiempo sin empleo, tus semanas cotizadas y la antigüedad de tu cuenta, y cambian según tu situación. Revisamos si cumples antes de que inicies el trámite.</p></div></div>
+            </div>
+            <div class="acc__item" data-reveal>
+                <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a4" id="q4">¿Puedo recuperar el dinero de mi subcuenta de vivienda del Infonavit?<i class="ph ph-plus" aria-hidden="true"></i></button></h3>
+                <div class="acc__panel" id="a4" role="region" aria-labelledby="q4"><div><p>Cuando se cumplen ciertas condiciones, como pensionarte o llegar a una edad determinada, y no tener un crédito vigente, puedes solicitar la devolución de tu saldo. Revisamos si te corresponde y cómo pedirlo.</p></div></div>
+            </div>
+            <div class="acc__item" data-reveal>
+                <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a5" id="q5">¿Los préstamos para pensionados tienen costo?<i class="ph ph-plus" aria-hidden="true"></i></button></h3>
+                <div class="acc__panel" id="a5" role="region" aria-labelledby="q5"><div><p>Todo crédito tiene un costo: intereses, comisiones y el CAT. Antes de que decidas te explicamos el monto, el plazo, el descuento mensual y el costo total. Todo crédito está sujeto a aprobación.</p></div></div>
+            </div>
+            <div class="acc__item" data-reveal>
+                <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a6" id="q6">¿Ustedes son parte del IMSS, del ISSSTE o del Infonavit?<i class="ph ph-plus" aria-hidden="true"></i></button></h3>
+                <div class="acc__panel" id="a6" role="region" aria-labelledby="q6"><div><p>No. Somos una asesoría privada e independiente. Te ayudamos a entender y gestionar tus trámites ante esas instituciones.</p></div></div>
+            </div>
+            <div class="acc__item" data-reveal>
+                <h3><button class="acc__btn" type="button" aria-expanded="false" aria-controls="a7" id="q7">¿Qué necesito para empezar?<i class="ph ph-plus" aria-hidden="true"></i></button></h3>
+                <div class="acc__panel" id="a7" role="region" aria-labelledby="q7"><div><p>Solo escribirnos por WhatsApp y contarnos tu situación. Después te indicamos qué documentos reunir según tu trámite, por ejemplo identificación oficial, CURP y número de seguridad social.</p></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contact" id="contacto" aria-labelledby="contact-title">
+    <div class="container contact__inner">
+        <div class="contact__copy">
+            <h2 id="contact-title" data-split>Cuéntanos tu caso. Nosotros hacemos el resto.</h2>
+            <p data-reveal>Déjanos tus datos y abrimos una conversación por WhatsApp con tu información lista. Sin compromiso.</p>
+
+            <ul class="contact__list" data-reveal>
+                <li>
+                    <span class="contact__ic"><i class="ph-fill ph-phone" aria-hidden="true"></i></span>
+                    <div><small>Llámanos o escríbenos</small><a href="tel:+525648220851">56 4822 0851</a></div>
+                </li>
+                <li>
+                    <span class="contact__ic contact__ic--wa"><svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg></span>
+                    <div><small>WhatsApp directo</small><a href="https://wa.me/525648220851" data-wa="Hola, quiero información sobre sus asesorías.">Abrir conversación</a></div>
+                </li>
+            </ul>
+        </div>
+
+        <form class="form" id="contact-form" novalidate data-reveal>
+            <div class="field">
+                <label for="f-name">Tu nombre</label>
+                <input id="f-name" name="nombre" type="text" autocomplete="name" placeholder="Ej. María Hernández" required>
+                <p class="field__err" id="e-name" role="alert"></p>
+            </div>
+            <div class="field">
+                <label for="f-phone">Tu teléfono o WhatsApp</label>
+                <input id="f-phone" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="10 dígitos" required>
+                <p class="field__err" id="e-phone" role="alert"></p>
+            </div>
+            <div class="field">
+                <label for="f-service">¿Qué trámite te interesa?</label>
+                <select id="f-service" name="tramite" required>
+                    <option value="">Elige una opción</option>
+                    <option>Asesoría de pensión IMSS e ISSSTE</option>
+                    <option>Retiro por desempleo</option>
+                    <option>Retiro de subcuenta Infonavit</option>
+                    <option>Préstamo a pensionados</option>
+                    <option>Préstamo para personal de gobierno</option>
+                    <option>Actualización de expediente Infonavit</option>
+                    <option>Trámites de Mejoravit</option>
+                    <option>No estoy seguro, necesito orientación</option>
+                </select>
+                <p class="field__err" id="e-service" role="alert"></p>
+            </div>
+            <div class="field">
+                <label for="f-msg">Cuéntanos tu caso <span class="opt">(opcional)</span></label>
+                <textarea id="f-msg" name="mensaje" rows="3" placeholder="Por ejemplo: llevo 30 años cotizando y quiero saber si ya puedo pensionarme."></textarea>
+            </div>
+
+            <button class="btn btn--primary btn--lg btn--block" type="submit" data-magnetic>
+                <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+                Enviar mis datos por WhatsApp
+            </button>
+            <p class="form__note">
+                <i class="ph-fill ph-lock-key" aria-hidden="true"></i>
+                Tus datos solo se usan para contactarte.
+                <button class="linklike" type="button" data-open-privacy>Aviso de privacidad</button>
+            </p>
+
+            <div class="form__ok" id="form-ok" hidden>
+                <span class="form__ok-ic"><i class="ph-bold ph-check"></i></span>
+                <p><strong>¡Listo!</strong> Abrimos WhatsApp con tu mensaje. Si no se abrió, <a href="https://wa.me/525648220851" id="form-retry" target="_blank" rel="noopener">haz clic aquí</a>.</p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="final" aria-labelledby="final-title">
+    <div class="final__bg" aria-hidden="true">
+        <span class="final__glow final__glow--1"></span>
+        <span class="final__glow final__glow--2"></span>
+        <span class="coin coin--f1" data-coin></span>
+        <span class="coin coin--f2" data-coin></span>
+    </div>
+    <div class="container final__inner">
+        <h2 id="final-title" data-split>Tu siguiente etapa empieza con un mensaje.</h2>
+        <p data-reveal>Escríbenos hoy y recibe una primera orientación para tu caso, en palabras claras y sin presión.</p>
+        <a class="btn btn--gold btn--xl" href="https://wa.me/525648220851" data-wa="Hola, estoy listo para mi pensión. ¿Cómo empezamos?" data-magnetic data-reveal>
+            <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+            Estoy listo, empecemos
+        </a>
+    </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <div class="container footer__grid">
+        <div class="footer__brand">
+            <a class="brand brand--light" href="#inicio" aria-label="Pensión Plena, ir al inicio">
+                <svg class="brand__mark" aria-hidden="true"><use href="#i-mark"/></svg>
+                <span class="brand__text">Pensión <b>Plena</b></span>
+            </a>
+            <p>Asesoría de pensión IMSS e ISSSTE, Infonavit y préstamos, con trato humano y seguimiento hasta el final.</p>
+        </div>
+        <nav class="footer__col" aria-label="Trámites">
+            <h2>Trámites</h2>
+            <ul>
+                <li><a href="#servicios">Pensión IMSS e ISSSTE</a></li>
+                <li><a href="#servicios">Retiro por desempleo</a></li>
+                <li><a href="#servicios">Subcuenta Infonavit</a></li>
+                <li><a href="#servicios">Préstamos</a></li>
+                <li><a href="#servicios">Expediente y Mejoravit</a></li>
+            </ul>
+        </nav>
+        <nav class="footer__col" aria-label="Sitio">
+            <h2>Sitio</h2>
+            <ul>
+                <li><a href="#beneficios">Beneficios</a></li>
+                <li><a href="#proceso">Proceso</a></li>
+                <li><a href="#preguntas">Preguntas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="footer__col">
+            <h2>Contacto</h2>
+            <ul>
+                <li><a href="tel:+525648220851">56 4822 0851</a></li>
+                <li><a href="https://wa.me/525648220851" data-wa="Hola, quiero información sobre sus asesorías.">WhatsApp</a></li>
+                <li><button class="linklike" type="button" data-open-privacy>Aviso de privacidad</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container footer__legal">
+        <p>Pensión Plena es una asesoría privada e independiente. No somos el IMSS, el ISSSTE ni el Infonavit, ni estamos afiliados a ninguna dependencia de gobierno; sus nombres se usan solo para describir los trámites. Los créditos están sujetos a aprobación: consulta condiciones, tasas y CAT antes de contratar.</p>
+        <p>© <span id="year">2026</span> Pensión Plena. Todos los derechos reservados. Fotografías: Unsplash.</p>
+    </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOTANTE ============ -->
+<div class="wa-float" id="wa-float">
+    <p class="wa-float__bubble" id="wa-bubble" role="status">¿Dudas con tu pensión? Escríbenos, con gusto te ayudamos.</p>
+    <a class="wa-float__btn" href="https://wa.me/525648220851" data-wa="Hola, tengo dudas sobre mi pensión." aria-label="Escríbenos por WhatsApp" target="_blank" rel="noopener">
+        <span class="wa-float__ring" aria-hidden="true"></span>
+        <span class="wa-float__ring wa-float__ring--2" aria-hidden="true"></span>
+        <svg class="ic" aria-hidden="true"><use href="#i-wa"/></svg>
+    </a>
+</div>
+
+<!-- ============ AVISO DE PRIVACIDAD ============ -->
+<!-- Texto simplificado. Sustituir por el aviso de privacidad completo del cliente, revisado por su asesor legal. -->
+<dialog class="dialog" id="privacy" aria-labelledby="privacy-title">
+    <form method="dialog" class="dialog__box">
+        <h2 id="privacy-title">Aviso de privacidad simplificado</h2>
+        <p><strong>Responsable:</strong> Pensión Plena.</p>
+        <p><strong>Datos que solicitamos:</strong> tu nombre, tu teléfono y la información de tu caso que decidas compartir.</p>
+        <p><strong>Para qué los usamos:</strong> para contactarte y orientarte sobre el trámite que solicitas.</p>
+        <p>La información del formulario se envía por WhatsApp y no se almacena en este sitio web. Puedes solicitar el acceso, la rectificación, la cancelación o la oposición al uso de tus datos escribiéndonos por WhatsApp.</p>
+        <button class="btn btn--primary" value="close">Entendido</button>
+    </form>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>
